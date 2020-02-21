@@ -1,8 +1,10 @@
 import { Controller, Get, Redirect } from '@nestjs/common';
 
+import { EMenuType } from './home/home.dto';
+
 @Controller()
 export class AppController {
 	@Get()
-	@Redirect('/home', 301)
+	@Redirect(`/${EMenuType.home}`, 301)
 	getIndex() {}
 }

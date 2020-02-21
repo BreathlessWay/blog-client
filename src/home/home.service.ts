@@ -1,20 +1,11 @@
 import { HttpService, Injectable } from '@nestjs/common';
 
-import { CustomConfigService } from '../config/config.service';
-
 @Injectable()
 export class HomeService {
-	constructor(
-		private readonly httpService: HttpService,
-		private readonly configService: CustomConfigService,
-	) {}
-
-	get basicUrl(): string {
-		return this.configService.basicUrl;
-	}
+	constructor(private readonly httpService: HttpService) {}
 
 	getMenu() {
-		const { httpService, basicUrl } = this;
-		return httpService.get(`${basicUrl}/soup`);
+		const { httpService } = this;
+		return httpService.get(`/menu`);
 	}
 }

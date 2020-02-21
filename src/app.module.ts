@@ -11,10 +11,19 @@ import { AppController } from './app.controller';
 
 @Module({
 	imports: [
-		HttpModule,
 		ConfigModule.forRoot({
 			isGlobal: true,
 			envFilePath: join(__dirname, '../env', `.${process.env.NODE_ENV}.env`),
+		}),
+		HttpModule.registerAsync({
+			imports: [ConfigModule],
+			useFactory: async (configService: CustomConfigService) => ({
+				timeout: 5000,
+				maxRedirects: 5,
+				baseURL: configService.basicUrl,
+			}),
+			inject: [CustomConfigService],
+			extraProviders: [CustomConfigService],
 		}),
 	],
 	controllers: [HomeController, AppController],

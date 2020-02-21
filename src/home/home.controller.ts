@@ -1,20 +1,24 @@
 import { Controller, Get, Render } from '@nestjs/common';
 
 import { HomeService } from './home.service';
+import { EMenuType, HomeResult, MenuListType } from './home.dto';
 
-@Controller('home')
+@Controller(EMenuType.home)
 export class HomeController {
 	constructor(private readonly homeService: HomeService) {}
 
 	@Get()
 	@Render('home')
-	async getAll() {
+	async getMenu(): Promise<HomeResult> {
 		const data = await this.homeService.getMenu().toPromise();
-		console.log(data.data);
+		let menus: MenuListType = data.data?.data?.list ?? [];
+		menus = menus.filter(menu => menu.show && !menu.onlyAdmin);
+		console.log(menus);
 		return {
 			title: '首页',
 			description: '个人博客',
 			keywords: '个人博客 首页 ',
+			menus,
 		};
 	}
 }

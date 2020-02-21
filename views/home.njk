@@ -1,7 +1,15 @@
 {% extends "common/template.njk" %}
 
 {% block content %}
-ssss！！: {{title}}
+<ul>
+    {% for menu in menus %}
+    <li>
+        <a href="/{{ menu.type }}">
+            {{ menu.name }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
 {% endblock %}
 
 {% block script %}
