@@ -10,6 +10,7 @@ export class HomeController {
 	@Render('home')
 	async getAll() {
 		const data = await this.homeService.getMenu().toPromise();
+		console.log(data.data);
 		return {
 			title: '首页',
 			description: '个人博客',
