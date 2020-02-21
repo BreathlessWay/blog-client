@@ -1,0 +1,13 @@
+{% extends "common/template.njk" %}
+
+{% block content %}
+ssss！！: {{title}}
+{% endblock %}
+
+{% block script %}
+<script>
+    $(function() {
+      console.log($('#blog').get(0));
+    })
+</script>
+{% endblock %}
