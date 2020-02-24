@@ -8,17 +8,17 @@ import {
 
 import { Response } from 'express';
 
-import { MenuService } from './common/menu.service';
+import { CommonService } from './common/common.service';
 import { ErrorHandle } from './common/errorHandle';
 
 @Controller()
 export class AppController {
-	constructor(private readonly menuService: MenuService) {}
+	constructor(private readonly commonService: CommonService) {}
 
 	@Get()
 	@ErrorHandle()
 	async getIndex(@Res() res: Response) {
-		const menus = await this.menuService.getMenu();
+		const menus = await this.commonService.getMenu();
 		if (menus.length) {
 			res.status(302).redirect(`/${menus[0].type}`);
 		} else {

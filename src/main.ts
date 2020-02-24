@@ -39,10 +39,15 @@ import { CustomConfigService } from './config/config.service';
 	app.setBaseViewsDir(join(__dirname, '..', 'views'));
 
 	const config: CustomConfigService = app.get(CustomConfigService);
-	nunjucks.configure(join(__dirname, '..', 'views'), {
+
+	const env = nunjucks.configure(join(__dirname, '..', 'views'), {
 		autoescape: true,
 		express: app,
 		watch: config.isDev,
+	});
+
+	env.addFilter('picUrl', function(str) {
+		return `${config.basicUrl}${str}`;
 	});
 
 	app.setViewEngine('njk');

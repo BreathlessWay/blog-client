@@ -1,22 +1,25 @@
-export type MenuItemType = {
-	_id: string;
-	name: string;
-	type: string;
-	show: boolean;
-	onlyAdmin: boolean;
-	sort: number;
-	__v: number;
-	createdAt: string;
-	updatedAt: string;
-};
+import {
+	FigureItemType,
+	HomeUserInfoType,
+	MenuListType,
+	SocialListType,
+} from '../common/common.dto';
 
-export type MenuListType = Array<MenuItemType>;
+export type HomeUserInfoFormatType = HomeUserInfoType & {
+	personalFigure: FigureItemType | null;
+	social: {
+		ico: SocialListType;
+		pic: SocialListType;
+	};
+};
 
 export class HomeResult {
 	title: string;
 	description: string;
 	keywords: string;
 	menus: MenuListType;
+	homeUserInfo: HomeUserInfoFormatType;
+	basicUrl: string;
 }
 
 export enum EMenuType {

@@ -14,6 +14,8 @@ html {
 	font-family: 'Microsoft Yahei', 'Hiragino Sans GB', 'Helvetica Neue',
 		Helvetica, tahoma, arial, Verdana, sans-serif, 'WenQuanYi Micro Hei',
 		'\5B8B\4F53';
+	/*对字体进行抗锯齿渲染*/
+	-webkit-font-smoothing: antialiased;
 }
 
 /* Sections
@@ -23,8 +25,9 @@ html {
  * Remove the margin in all browsers.
  */
 
-body {
+* {
 	margin: 0;
+	padding: 0;
 }
 
 /**
@@ -42,7 +45,6 @@ main {
 
 h1 {
 	font-size: 2em;
-	margin: 0;
 }
 
 /* Grouping content
@@ -78,6 +80,7 @@ pre {
 
 a {
 	background-color: transparent;
+	text-decoration: none;
 }
 
 /**
@@ -148,7 +151,8 @@ sup {
  * Remove the border on images inside links in IE 10.
  */
 
-img {
+img,
+table {
 	border-style: none;
 	width: 100%;
 }
@@ -169,7 +173,6 @@ textarea {
 	font-family: inherit; /* 1 */
 	font-size: 100%; /* 1 */
 	line-height: 1.15; /* 1 */
-	margin: 0; /* 2 */
 }
 
 /**
@@ -214,7 +217,6 @@ button::-moz-focus-inner,
 [type='reset']::-moz-focus-inner,
 [type='submit']::-moz-focus-inner {
 	border-style: none;
-	padding: 0;
 }
 
 /**
@@ -248,7 +250,6 @@ legend {
 	color: inherit; /* 2 */
 	display: table; /* 1 */
 	max-width: 100%; /* 1 */
-	padding: 0; /* 3 */
 	white-space: normal; /* 1 */
 }
 
@@ -276,7 +277,6 @@ textarea {
 [type='checkbox'],
 [type='radio'] {
 	box-sizing: border-box; /* 1 */
-	padding: 0; /* 2 */
 }
 
 /**
@@ -354,7 +354,16 @@ template {
 	display: none;
 }
 
-* {
-	margin: 0;
-	padding: 0;
+html,
+body,
+#blog {
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+}
+
+ol,
+ul,
+li {
+	list-style: none;
 }
