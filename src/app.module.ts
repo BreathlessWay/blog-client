@@ -8,6 +8,7 @@ import { HomeService } from './home/home.service';
 
 import { CustomConfigService } from './config/config.service';
 import { AppController } from './app.controller';
+import { MenuService } from './common/menu.service';
 
 @Module({
 	imports: [
@@ -27,6 +28,6 @@ import { AppController } from './app.controller';
 		}),
 	],
 	controllers: [HomeController, AppController],
-	providers: [HomeService, CustomConfigService],
+	providers: [HomeService, CustomConfigService, MenuService],
 })
 export class AppModule {}
