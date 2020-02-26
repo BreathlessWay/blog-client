@@ -1,0 +1,17 @@
+#blog {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.menu {
+	flex: 1;
+}
+
+.page-content {
+	display: flex;
+	flex: 4;
+	max-width: 1200px;
+	align-items: flex-end;
+}

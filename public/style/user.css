@@ -1,0 +1,45 @@
+#blog {
+	background: #ffe04e;
+}
+
+.user-content {
+	align-items: center;
+}
+
+.user-content_left {
+	flex: 1;
+}
+
+.user-content_right {
+	flex: 1;
+	padding-bottom: 30px;
+}
+
+.user-content_title {
+	font-size: 48px;
+}
+
+.user-content_info {
+	margin: 30px 0 40px;
+}
+
+.user-content_intro {
+	line-height: 1.5;
+}
+
+.user-content_skill {
+	width: 90%;
+	margin-top: 30px;
+}
+
+.user-content-skill_item + .user-content-skill_item {
+	margin-top: 10px;
+}
+
+.user-content-skill_name {
+	line-height: 1.6;
+}
+
+.user-content-skill_line {
+	height: 8px;
+}

@@ -1,0 +1,17 @@
+{% macro menu(name, menus) %}
+<ul class="menu flex">
+    {% for item in menus %}
+    <li class="menu-item">
+        {% if item.type === name %}
+        <a href="/{{ item.type }}" class="active menu-item_link">
+            {{ item.name }}
+        </a>
+        {% else %}
+        <a href="/{{ item.type }}" class="menu-item_link">
+            {{ item.name }}
+        </a>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% endmacro %}

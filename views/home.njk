@@ -1,6 +1,7 @@
 {% extends "common/template.njk" %}
 
 {% block link %}
+<link rel="stylesheet" href="/style/page.css">
 <link rel="stylesheet" href="/style/home.css">
 {% endblock %}
 
@@ -9,7 +10,7 @@
 {% import "common/macro.njk" as macro %}
 {{ macro.menu('home', menus) }}
 
-<article class="home-content flex">
+<article class="home-content page-content">
     <section class="home-content_left">
         <h3 class="home-content_en">
             {{ homeUserInfo.en }}
@@ -39,9 +40,11 @@
             </li>
             {% endfor %}
         </ul>
+        {% if homeUserInfo.resumeUrl %}
         <a href="{{ homeUserInfo.resumeUrl | picUrl }}" download="简历" class="home-content_resume text-center">
             {{ homeUserInfo.resumeAlias }}
         </a>
+        {% endif %}
     </section>
     <section class="home-content_right">
         {% if homeUserInfo.personalFigure %}

@@ -1,0 +1,46 @@
+{% extends "common/template.njk" %}
+
+{% block link %}
+<link rel="stylesheet" href="/style/page.css">
+<link rel="stylesheet" href="/style/user.css">
+{% endblock %}
+
+{% block content %}
+
+{% import "common/macro.njk" as macro %}
+{{ macro.menu('user', menus) }}
+
+<article class="user-content page-content">
+    <section class="user-content_left">
+        {% if userUserInfo.hobbiesFigure %}
+        <img src="{{ userUserInfo.hobbiesFigure.url | picUrl }}" alt="{{ userUserInfo.hobbiesFigure.title }}">
+        {% endif %}
+    </section>
+    <section class="user-content_right">
+        <h1 class="user-content_title">
+            {{ userUserInfo.personalTitle }}
+        </h1>
+        <p class="user-content_info">
+            {{ userUserInfo.personalInfo }}
+        </p>
+        <p class="user-content_intro">
+            {{ userUserInfo.personalIntro }}
+        </p>
+        <ul class="user-content_skill">
+            {% for skill in  userUserInfo.personalSkill %}
+                <li class="user-content-skill_item">
+                    <p class="user-content-skill_name">
+                        {{ skill.name }}
+                    </p>
+                    <aside style="width: {{ skill.percent }}%; background-color: {{ skill.color }}" class="user-content-skill_line">
+                    </aside>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+</article>
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}

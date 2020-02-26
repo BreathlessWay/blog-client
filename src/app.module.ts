@@ -9,6 +9,10 @@ import { HomeService } from './home/home.service';
 import { CustomConfigService } from './config/config.service';
 import { AppController } from './app.controller';
 import { CommonService } from './common/common.service';
+import { UserController } from './user/user.controller';
+import { UserService } from './user/user.service';
+import { ReadController } from './read/read.controller';
+import { ReadService } from './read/read.service';
 
 @Module({
 	imports: [
@@ -27,7 +31,13 @@ import { CommonService } from './common/common.service';
 			extraProviders: [CustomConfigService],
 		}),
 	],
-	controllers: [HomeController, AppController],
-	providers: [HomeService, CustomConfigService, CommonService],
+	controllers: [HomeController, AppController, UserController, ReadController],
+	providers: [
+		HomeService,
+		CustomConfigService,
+		CommonService,
+		UserService,
+		ReadService,
+	],
 })
 export class AppModule {}

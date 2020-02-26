@@ -19,14 +19,4 @@ export class HomeResult {
 	keywords: string;
 	menus: MenuListType;
 	homeUserInfo: HomeUserInfoFormatType;
-	basicUrl: string;
-}
-
-export enum EMenuType {
-	home = 'home',
-	me = 'user',
-	article = 'read',
-	cat = 'contacts',
-	photography = 'camera',
-	statistics = 'fund',
 }
