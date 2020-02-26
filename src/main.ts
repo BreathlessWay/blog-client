@@ -47,7 +47,7 @@ import { CustomConfigService } from './config/config.service';
 	});
 
 	env.addFilter('picUrl', function(str) {
-		return `${config.basicUrl}${str}`;
+		return `${config.prefixUrl}${str}`;
 	});
 
 	app.setViewEngine('njk');

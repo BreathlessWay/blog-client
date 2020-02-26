@@ -9,44 +9,43 @@
 {% import "common/macro.njk" as macro %}
 {{ macro.menu('home', menus) }}
 
-<article class="">
-    <section>
-        <h3>
+<article class="home-content flex">
+    <section class="home-content_left">
+        <h3 class="home-content_en">
             {{ homeUserInfo.en }}
         </h3>
 
-        <h1>
+        <h1 class="home-content_zh">
             {{ homeUserInfo.zh }}
         </h1>
 
-        <p>
+        <p class="home-content_intro">
             {{ homeUserInfo.intro }}
         </p>
-        <ul>
+        <ul class="home-content-icon_list flex">
             {% for ico in homeUserInfo.social.ico %}
-                    <li>
-                        <a href="{{ ico.value }}">
+                    <li class="home-content-icon_item">
+                        <a href="{{ ico.value }}" class="home-content-icon_link" target="_blank">
                             <img src="{{ ico.icon | picUrl }}" alt="">
                         </a>
                     </li>
             {% endfor %}
         </ul>
-        <ul>
+        <ul class="home-content-pic_list flex">
             {% for ico in homeUserInfo.social.pic %}
-            <li>
-                <a href="{{ ico.value }}">
+            <li class="home-content-pic_item text-center">
                     <img src="{{ ico.icon | picUrl }}" alt="">
-                </a>
+                <span>{{ ico.value }}</span>
             </li>
             {% endfor %}
         </ul>
-        <a href="{{ homeUserInfo.resumeUrl | picUrl }}" download="简历">
+        <a href="{{ homeUserInfo.resumeUrl | picUrl }}" download="简历" class="home-content_resume text-center">
             {{ homeUserInfo.resumeAlias }}
         </a>
     </section>
-    <section>
+    <section class="home-content_right">
         {% if homeUserInfo.personalFigure %}
-        <img src="{{ homeUserInfo.personalFigure.url | picUrl }}" alt="">
+        <img src="{{ homeUserInfo.personalFigure.url | picUrl }}" alt="{{ homeUserInfo.personalFigure.title }}">
         {% endif %}
     </section>
 </article>
@@ -56,9 +55,5 @@
 {% endblock %}
 
 {% block script %}
-<script>
-    $(function() {
-      console.log($('#blog').get(0));
-    })
-</script>
+
 {% endblock %}

@@ -26,6 +26,10 @@ export class CustomConfigService {
 		return this.configService.get('BASIC_URL');
 	}
 
+	get prefixUrl(): string {
+		return this.configService.get('PREFIX_URL');
+	}
+
 	get port(): number {
 		const port = this.configService.get('PORT');
 		return parseInt(port, 10);

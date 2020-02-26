@@ -185,6 +185,7 @@ html {
 	width: 100%;
 	height: 100%;
 	font-size: 14px;
+	color: #000;
 }
 
 li,
@@ -200,4 +201,26 @@ ul {
 .flex {
 	display: flex;
 	align-items: center;
+}
+
+.menu {
+	justify-content: center;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.menu-item + .menu-item {
+	margin-left: 90px;
+}
+
+.menu-item_link {
+	color: #000;
+}
+
+.active.menu-item_link {
+	text-decoration: underline;
+}
+
+img {
+	display: block;
 }
