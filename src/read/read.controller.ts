@@ -57,10 +57,11 @@ export class ReadController {
 	async renderDetail(
 		@Res() response: Response,
 		@Param() params: ArticleDetailParams,
-	): Promise<ArticleDetailResult> {
+	) {
 		const { id } = params;
 		const menus = await this.commonService.getMenu(),
-			detail = await this.readService.getArticleDetail({ id });
+			detail = await this.readService.getArticleDetail({ id }),
+			reward = await this.readService.getRewardInfo();
 
 		if (!detail) {
 			response.redirect(`/${EMenuType.read}`);
@@ -72,6 +73,7 @@ export class ReadController {
 				keywords: '博客文章列表',
 				menus,
 				detail,
+				reward,
 			});
 		}
 	}

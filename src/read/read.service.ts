@@ -1,12 +1,18 @@
 import { HttpService, Injectable } from '@nestjs/common';
 
+import { CommonService } from '../common/common.service';
+
 import * as Qs from 'qs';
 
 import { ArticleListType, EArticleStatus, TagListType } from './read.dto';
+import { RewardInfoType } from '../common/common.dto';
 
 @Injectable()
 export class ReadService {
-	constructor(private readonly httpService: HttpService) {}
+	constructor(
+		private readonly httpService: HttpService,
+		private readonly commonService: CommonService,
+	) {}
 
 	async getArticleTags(): Promise<TagListType> {
 		const data = await this.httpService.get('/tags').toPromise();
@@ -93,5 +99,24 @@ export class ReadService {
 		}
 
 		return null;
+	}
+
+	async getRewardInfo(): Promise<RewardInfoType> {
+		const data = await this.commonService.getUserInfo();
+		const result = {
+			rewardEnable: false,
+			rewardTitle: '',
+			zfbCode: '',
+			wxCode: '',
+		};
+
+		if (data) {
+			result.rewardEnable = data.rewardEnable;
+			result.rewardTitle = data.rewardTitle;
+			result.zfbCode = data.zfbCode;
+			result.wxCode = data.wxCode;
+		}
+
+		return result;
 	}
 }

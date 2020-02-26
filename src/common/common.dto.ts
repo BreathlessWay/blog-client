@@ -64,6 +64,13 @@ export type UserUserInfoType = {
 	personalSkill: PersonalSkillListType;
 };
 
+export type RewardInfoType = {
+	rewardEnable: boolean;
+	rewardTitle: string;
+	zfbCode: string;
+	wxCode: string;
+};
+
 export type UserDetailType = HomeUserInfoType &
 	UserUserInfoType & {
 		_id: string;
@@ -72,9 +79,4 @@ export type UserDetailType = HomeUserInfoType &
 		personalFigure: FigureListType;
 
 		hobbiesFigure: FigureListType;
-
-		rewardEnable: boolean;
-		rewardTitle: string;
-		zfbCode: string;
-		wxCode: string;
-	};
+	} & RewardInfoType;

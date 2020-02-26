@@ -1,0 +1,50 @@
+#blog,
+body,
+html {
+	height: auto;
+}
+
+#blog {
+	background: #ffe04e;
+}
+
+.detail-content {
+	width: 800px;
+}
+
+.detail-content_title {
+	font-size: 36px;
+}
+
+.detail-content_tip {
+	line-height: 3;
+	font-size: 14px;
+}
+
+.detail-content_time {
+	margin: 0 40px;
+}
+
+.detail-content_intro {
+	background: aliceblue;
+	line-height: 1.5;
+	padding: 10px 0;
+}
+
+.detail-content_detail {
+	padding: 20px 0 40px;
+	word-break: break-all;
+	line-height: 1.5;
+}
+
+.detail-content-reward {
+	font-size: 24px;
+}
+
+.detail-content-reward_code {
+	display: inline-block;
+	margin: 10px 10px 60px;
+	width: 160px;
+	font-size: 16px;
+	line-height: 3;
+}

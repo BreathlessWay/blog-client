@@ -10,7 +10,45 @@
 {{ macro.menu('read', menus) }}
 
 <article class="detail-content blog-content">
-
+    <h1 class="text-center detail-content_title">
+        {{ detail.title }}
+    </h1>
+    <aside class="text-center detail-content_tip">
+        <span class="detail-content_visit">
+            阅读量：{{ detail.visit }}
+        </span>
+        <span class="detail-content_time">
+            {{ detail.createdAt | formatTime }}
+        </span>
+        {% for tag in detail.tags%}
+            <span class="detail-content_tag">
+                {{ tag }}
+            </span>
+        {% endfor %}
+    </aside>
+    <p class="text-center detail-content_intro">
+        {{ detail.intro }}
+    </p>
+    <section class="detail-content_detail">
+        {{ detail.richTextHtml}}
+    </section>
+    {% if reward.rewardEnable %}
+    <section class="text-center detail-content-reward">
+        <p>
+            {{ reward.rewardTitle }}
+        </p>
+        <ul>
+            <li  class="detail-content-reward_code">
+                <img src="{{ reward.zfbCode | picUrl}}" alt="">
+                <span>支付宝</span>
+            </li>
+            <li class="detail-content-reward_code">
+                <img src="{{ reward.wxCode | picUrl}}" alt="">
+                <span>微信</span>
+            </li>
+        </ul>
+    </section>
+    {% endif %}
 </article>
 
 {% endblock %}

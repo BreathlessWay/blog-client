@@ -42,7 +42,7 @@ import { CustomConfigService } from './config/config.service';
 	const config: CustomConfigService = app.get(CustomConfigService);
 
 	const env = nunjucks.configure(join(__dirname, '..', 'views'), {
-		autoescape: true,
+		autoescape: false,
 		express: app,
 		watch: config.isDev,
 	});
