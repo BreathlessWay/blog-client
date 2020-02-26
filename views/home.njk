@@ -1,8 +1,8 @@
 {% extends "common/template.njk" %}
 
 {% block link %}
-<link rel="stylesheet" href="/style/page.css">
-<link rel="stylesheet" href="/style/home.css">
+<link rel="stylesheet" href="/public/style/page.css">
+<link rel="stylesheet" href="/public/style/home.css">
 {% endblock %}
 
 {% block content %}
@@ -10,7 +10,7 @@
 {% import "common/macro.njk" as macro %}
 {{ macro.menu('home', menus) }}
 
-<article class="home-content page-content">
+<article class="home-content page-content blog-content">
     <section class="home-content_left">
         <h3 class="home-content_en">
             {{ homeUserInfo.en }}

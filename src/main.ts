@@ -6,6 +6,7 @@ import * as nunjucks from 'nunjucks';
 import * as compression from 'compression';
 import * as helmet from 'helmet';
 import * as rateLimit from 'express-rate-limit';
+import * as moment from 'moment';
 
 import { join } from 'path';
 
@@ -35,7 +36,7 @@ import { CustomConfigService } from './config/config.service';
 		}),
 	);
 
-	app.useStaticAssets(join(__dirname, '..', 'public'));
+	app.useStaticAssets(join(__dirname, '..', 'public'), { prefix: '/public' });
 	app.setBaseViewsDir(join(__dirname, '..', 'views'));
 
 	const config: CustomConfigService = app.get(CustomConfigService);
@@ -48,6 +49,10 @@ import { CustomConfigService } from './config/config.service';
 
 	env.addFilter('picUrl', function(str) {
 		return `${config.prefixUrl}${str}`;
+	});
+
+	env.addFilter('formatTime', function(str) {
+		return moment(str).format('YYYY年MM月DD日');
 	});
 
 	app.setViewEngine('njk');

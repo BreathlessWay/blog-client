@@ -13,6 +13,7 @@
 .user-content_right {
 	flex: 1;
 	padding-bottom: 30px;
+	box-sizing: border-box;
 }
 
 .user-content_title {

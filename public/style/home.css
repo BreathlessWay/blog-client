@@ -8,6 +8,7 @@
 .home-content_left {
 	flex: 1;
 	padding-bottom: 60px;
+	align-self: flex-start;
 }
 
 .home-content_right {
