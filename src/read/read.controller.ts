@@ -1,10 +1,18 @@
-import { Controller, Get, Query, Render } from '@nestjs/common';
+import { Controller, Get, Param, Query, Render, Res } from '@nestjs/common';
 
 import { ReadService } from './read.service';
 import { CommonService } from '../common/common.service';
 
+import { ErrorHandle } from '../common/errorHandle';
+
+import { Response } from 'express';
 import { EMenuType } from '../common/common.dto';
-import { ArticleListQuery, ArticleResult } from './read.dto';
+import {
+	ArticleDetailParams,
+	ArticleDetailResult,
+	ArticleListQuery,
+	ArticleResult,
+} from './read.dto';
 
 @Controller(EMenuType.read)
 export class ReadController {
@@ -15,6 +23,7 @@ export class ReadController {
 
 	@Get()
 	@Render('read')
+	@ErrorHandle()
 	async renderArticleList(
 		@Query() query: ArticleListQuery,
 	): Promise<ArticleResult> {
@@ -41,5 +50,29 @@ export class ReadController {
 			nextQuery: articleList.nextQuery,
 			allCount: articleList.allCount,
 		};
+	}
+
+	@Get('/detail/:id')
+	@ErrorHandle()
+	async renderDetail(
+		@Res() response: Response,
+		@Param() params: ArticleDetailParams,
+	): Promise<ArticleDetailResult> {
+		const { id } = params;
+		const menus = await this.commonService.getMenu(),
+			detail = await this.readService.getArticleDetail({ id });
+
+		if (!detail) {
+			response.redirect(`/${EMenuType.read}`);
+			return;
+		} else {
+			response.render('detail', {
+				title: '文章列表',
+				description: '博客文章列表 ',
+				keywords: '博客文章列表',
+				menus,
+				detail,
+			});
+		}
 	}
 }

@@ -3,6 +3,8 @@ import { Controller, Get, Render } from '@nestjs/common';
 import { UserService } from './user.service';
 import { CommonService } from '../common/common.service';
 
+import { ErrorHandle } from '../common/errorHandle';
+
 import { EMenuType } from '../common/common.dto';
 import { UserResult } from './user.dto';
 
@@ -15,6 +17,7 @@ export class UserController {
 
 	@Get()
 	@Render('user')
+	@ErrorHandle()
 	async renderUser(): Promise<UserResult> {
 		const menus = await this.commonService.getMenu();
 		const userUserInfo = await this.userService.getUserUserInfo();

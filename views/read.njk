@@ -1,0 +1,166 @@
+{% extends "common/template.njk" %}
+
+{% block link %}
+<link rel="stylesheet" href="/public/style/read.css">
+{% endblock %}
+
+{% block content %}
+
+{% import "common/macro.njk" as macro %}
+{{ macro.menu('read', menus) }}
+
+<article class="read-content blog-content">
+    <section class="read-content-search">
+        <section class="read-content-search_item flex">
+            {% if keyword %}
+            <span>
+            {{ keyword }}
+        </span>
+            {% else %}
+            <svg class="icon"
+                 style="width: 1rem; height: 1rem;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                 viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1631">
+                <path d="M756.7 183.4c-158.3-158.3-415-158.3-573.3 0s-158.3 415 0 573.3c142 142 362.9 156.2 521.2 43.5L844 939.6c26.3 26.3 69.3 26.3 95.6 0s26.3-69.3 0-95.6L800.2 704.7c112.7-158.4 98.5-379.3-43.5-521.3z m-95.5 477.8c-105.4 105.4-276.8 105.4-382.2 0S173.6 384.3 279 279s276.8-105.4 382.2 0 105.4 276.8 0 382.2z"
+                      p-id="1632"></path>
+            </svg>
+            &nbsp;
+            <span>
+            请输入搜索关键字
+        </span>
+            {% endif %}
+        </section>
+        <section class="read-content-search_pop">
+            <div class="text-right">
+                <svg class="icon read-content_close"
+                     style="width: 1rem; height: 1rem;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                     viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1466">
+                    <path d="M583.168 523.776L958.464 148.48c18.944-18.944 18.944-50.176 0-69.12l-2.048-2.048c-18.944-18.944-50.176-18.944-69.12 0L512 453.12 136.704 77.312c-18.944-18.944-50.176-18.944-69.12 0l-2.048 2.048c-19.456 18.944-19.456 50.176 0 69.12l375.296 375.296L65.536 899.072c-18.944 18.944-18.944 50.176 0 69.12l2.048 2.048c18.944 18.944 50.176 18.944 69.12 0L512 594.944 887.296 970.24c18.944 18.944 50.176 18.944 69.12 0l2.048-2.048c18.944-18.944 18.944-50.176 0-69.12L583.168 523.776z"
+                          p-id="1467"></path>
+                </svg>
+            </div>
+            <form class="search-form">
+                <label for="search" class="search-input_label flex">
+                    <svg class="icon"
+                         style="width: 1.2rem; height: 1.2rem;vertical-align: middle;fill: currentColor;overflow: hidden;"
+                         viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1631">
+                        <path d="M756.7 183.4c-158.3-158.3-415-158.3-573.3 0s-158.3 415 0 573.3c142 142 362.9 156.2 521.2 43.5L844 939.6c26.3 26.3 69.3 26.3 95.6 0s26.3-69.3 0-95.6L800.2 704.7c112.7-158.4 98.5-379.3-43.5-521.3z m-95.5 477.8c-105.4 105.4-276.8 105.4-382.2 0S173.6 384.3 279 279s276.8-105.4 382.2 0 105.4 276.8 0 382.2z"
+                              p-id="1632"></path>
+                    </svg>
+                    <input type="search" id="search" placeholder="请输入搜索关键字" class="search-input" value="{{ keyword }}"
+                           maxlength="100" autofocus/>
+                </label>
+            </form>
+            <ul class="read-content-tag_list flex">
+                <li class="read-content-tag_item text-center">
+                    <p class="read-content-tag_name">
+                        全部
+                    </p>
+                    <p class="read-content-tag_count">
+                        {{ allCount }}篇
+                    </p>
+                </li>
+                {% for tag in tagList %}
+                <li class="read-content-tag_item text-center" data-tagid="{{ tag._id }}">
+                    <p class="read-content-tag_name">
+                        {{ tag.name }}
+                    </p>
+                    <p class="read-content-tag_count">
+                        {{ tag.count }}篇
+                    </p>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </section>
+    <section class="read-content-article">
+        <ul class="read-content-article_list flex">
+            {% for article in articleList %}
+            <li class="read-content-article_item">
+                <section class="read-content-article_item__wrap">
+                    <h3 class="read-content-article_title">{{ article.title }}</h3>
+                    <p class="read-content-article_intro">{{ article.intro }}</p>
+                    <aside class="read-content-article_tip flex">
+                        <span>{{ article.createdAt | formatTime }}</span>
+                        <a href="/read/detail/{{ article._id }}">阅读全文</a>
+                    </aside>
+                </section>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    <section class="read-content-page flex">
+        <aside class="read-content-page_btn">
+            {% if hasPre %}
+            <a href="/read{{ preQuery }}">
+                <img src="/public/image/left.png" alt="">
+            </a>
+            {% endif %}
+        </aside>
+
+        <aside class="read-content-page_btn">
+            {% if hasNext %}
+            <a href="/read{{ nextQuery }}" class="read-content-page_btn">
+                <img src="/public/image/right.png" alt="">
+            </a>
+            {% endif %}
+        </aside>
+    </section>
+</article>
+
+{% endblock %}
+
+{% block script %}
+<script src="https://lib.baomitu.com/qs/6.9.1/qs.min.js"></script>
+<script>
+  $(function() {
+
+    function jump(key, value) {
+      var query = Qs.parse(location.search.replace('?', ''));
+      var _value = value||'';
+      query[key] = _value.trim();
+      if (!_value.trim()) {
+        delete query[key];
+      }
+      query = Qs.stringify(query);
+      if (query) {
+        query = '?' + query;
+      }
+      location.href = '/read' + query;
+    }
+
+
+    $('.read-content-search_item').on('click', function(e) {
+      e.stopPropagation();
+      $('.read-content-search_pop').slideDown();
+    });
+
+    $('.read-content_close').on('click', function(e) {
+      e.stopPropagation();
+      $('.read-content-search_pop').slideUp();
+    });
+
+    $('.read-content-search_pop').on('click', function(e) {
+      e.stopPropagation();
+    })
+
+    $('#blog').on('click', function() {
+      $('.read-content-search_pop').slideUp();
+    });
+
+    var $form = $('.search-form'),
+      $input = $('.search-input');
+
+    $form.on('submit', function(e) {
+      e.preventDefault();
+      jump('keyword', $input.val());
+    });
+
+    var $tag = $('.read-content-tag_item');
+
+    $tag.on('click', function() {
+      jump('tagId', $(this).data('tagid'));
+    });
+  });
+</script>
+
+{% endblock %}

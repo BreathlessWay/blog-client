@@ -2,7 +2,7 @@ import { HttpService, Injectable } from '@nestjs/common';
 
 import * as Qs from 'qs';
 
-import { ArticleListType, TagListType } from './read.dto';
+import { ArticleListType, EArticleStatus, TagListType } from './read.dto';
 
 @Injectable()
 export class ReadService {
@@ -72,5 +72,26 @@ export class ReadService {
 			preQuery: `?${Qs.stringify(preQuery)}`,
 			allCount,
 		};
+	}
+
+	async getArticleDetail({ id }: { id: string }) {
+		const tags = await this.getArticleTags();
+		const data = await this.httpService.get(`/article/${id}`).toPromise();
+		const detail = data.data?.data ?? null;
+
+		if (detail.status === EArticleStatus.show) {
+			if (detail && detail.tags && detail.tags.length && tags && tags.length) {
+				detail.tags = tags
+					.map(tag => {
+						if (detail.tags.includes(tag._id)) {
+							return tag.name;
+						}
+					})
+					.filter(value => value);
+			}
+			return detail;
+		}
+
+		return null;
 	}
 }

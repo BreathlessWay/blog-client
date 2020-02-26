@@ -1,0 +1,26 @@
+{% extends "common/template.njk" %}
+
+{% block link %}
+<link rel="stylesheet" href="/public/style/detail.css">
+{% endblock %}
+
+{% block content %}
+
+{% import "common/macro.njk" as macro %}
+{{ macro.menu('read', menus) }}
+
+<article class="detail-content blog-content">
+
+</article>
+
+{% endblock %}
+
+{% block script %}
+<script src="https://lib.baomitu.com/qs/6.9.1/qs.min.js"></script>
+<script>
+  $(function() {
+
+  });
+</script>
+
+{% endblock %}
