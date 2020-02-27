@@ -33,6 +33,7 @@
 	width: 100%;
 	outline: none;
 	text-indent: 0.4rem;
+	height: 40px;
 }
 
 .search-form {
@@ -98,7 +99,7 @@
 }
 
 .read-content-page {
-	margin-top: 20px;
+	padding: 20px 0;
 	justify-content: center;
 }
 

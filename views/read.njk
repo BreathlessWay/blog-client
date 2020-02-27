@@ -129,6 +129,9 @@
       if (!_value.trim()) {
         delete query[key];
       }
+      if(key==='tagId'){
+        query.pageIndex = 1;
+      }
       query = Qs.stringify(query);
       if (query) {
         query = '?' + query;
