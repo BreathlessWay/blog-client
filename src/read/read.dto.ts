@@ -84,5 +84,6 @@ export class ArticleDetailResult {
 		createdAt: string;
 		updatedAt: string;
 		tags: Array<string>;
+		renderHtml: string;
 	};
 }

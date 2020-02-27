@@ -76,14 +76,16 @@
         <ul class="read-content-article_list flex">
             {% for article in articleList %}
             <li class="read-content-article_item">
+                <a href="/read/detail/{{ article._id }}">
                 <section class="read-content-article_item__wrap">
                     <h3 class="read-content-article_title">{{ article.title }}</h3>
                     <p class="read-content-article_intro">{{ article.intro }}</p>
                     <aside class="read-content-article_tip flex">
                         <span>{{ article.createdAt | formatTime }}</span>
-                        <a href="/read/detail/{{ article._id }}">阅读全文</a>
+                        <span style="color: #000">阅读全文</span>
                     </aside>
                 </section>
+                </a>
             </li>
             {% endfor %}
         </ul>

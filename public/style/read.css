@@ -108,6 +108,7 @@
 .read-content-article_title {
 	font-size: 20px;
 	word-break: break-word;
+	color: #000;
 }
 
 .read-content-article_intro {
@@ -124,4 +125,8 @@
 
 .read-content-article_tip a {
 	color: #000;
+}
+
+.detail-content_detail {
+	word-break: break-word;
 }

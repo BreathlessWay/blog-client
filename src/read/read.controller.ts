@@ -68,9 +68,9 @@ export class ReadController {
 			return;
 		} else {
 			response.render('detail', {
-				title: '文章列表',
-				description: '博客文章列表 ',
-				keywords: '博客文章列表',
+				title: detail?.title ?? '文章详情',
+				description: detail?.intro ?? '博客文章详情',
+				keywords: detail?.tags ?? ['博客文章详情'].join('，'),
 				menus,
 				detail,
 				reward,

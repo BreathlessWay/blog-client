@@ -33,8 +33,11 @@ html {
 
 .detail-content_detail {
 	padding: 20px 0 40px;
-	word-break: break-all;
 	line-height: 1.5;
+}
+
+.markdown-body ul {
+	list-style: initial;
 }
 
 .detail-content-reward {

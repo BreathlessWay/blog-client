@@ -1,6 +1,8 @@
 {% extends "common/template.njk" %}
 
 {% block link %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
 <link rel="stylesheet" href="/public/style/detail.css">
 {% endblock %}
 
@@ -30,7 +32,7 @@
         {{ detail.intro }}
     </p>
     <section class="detail-content_detail">
-        {{ detail.richTextHtml}}
+        {{ detail.renderHtml}}
     </section>
     {% if reward.rewardEnable %}
     <section class="text-center detail-content-reward">

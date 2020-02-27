@@ -3,8 +3,15 @@ import { HttpService, Injectable } from '@nestjs/common';
 import { CommonService } from '../common/common.service';
 
 import * as Qs from 'qs';
+import * as marked from 'marked';
+import * as hljs from 'highlight.js';
 
-import { ArticleListType, EArticleStatus, TagListType } from './read.dto';
+import {
+	ArticleListType,
+	EArticleRenderType,
+	EArticleStatus,
+	TagListType,
+} from './read.dto';
 import { RewardInfoType } from '../common/common.dto';
 
 @Injectable()
@@ -85,8 +92,8 @@ export class ReadService {
 		const data = await this.httpService.get(`/article/${id}`).toPromise();
 		const detail = data.data?.data ?? null;
 
-		if (detail.status === EArticleStatus.show) {
-			if (detail && detail.tags && detail.tags.length && tags && tags.length) {
+		if (detail && detail.status === EArticleStatus.show) {
+			if (detail.tags && detail.tags.length && tags && tags.length) {
 				detail.tags = tags
 					.map(tag => {
 						if (detail.tags.includes(tag._id)) {
@@ -94,6 +101,27 @@ export class ReadService {
 						}
 					})
 					.filter(value => value);
+			}
+			if (detail.renderType === EArticleRenderType.richText) {
+				detail.renderHtml = detail.richTextHtml;
+			}
+			if (detail.renderType === EArticleRenderType.markdown) {
+				marked.setOptions({
+					renderer: new marked.Renderer(),
+					gfm: true,
+					breaks: false,
+					pedantic: false,
+					sanitize: false,
+					smartLists: true,
+					smartypants: false,
+					highlight(code: string) {
+						return hljs.highlightAuto(code).value;
+					},
+				});
+
+				detail.renderHtml = `<article class="markdown-body">${marked(
+					detail.markdown,
+				)}</article>`;
 			}
 			return detail;
 		}
