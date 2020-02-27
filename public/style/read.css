@@ -123,6 +123,12 @@
 	color: #707172;
 	font-size: 14px;
 	line-height: 1.5;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	/* autoprefixer: off */
+	-webkit-box-orient: vertical;
 }
 
 .read-content-article_tip {
