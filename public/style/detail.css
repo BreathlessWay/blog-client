@@ -35,6 +35,7 @@ html {
 .detail-content_detail {
 	padding: 20px 0 40px;
 	line-height: 1.5;
+	word-break: break-all;
 }
 
 .markdown-body ul {

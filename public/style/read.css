@@ -99,7 +99,7 @@
 }
 
 .read-content-page {
-	padding: 20px 0;
+	padding: 10px 0;
 	justify-content: center;
 }
 
@@ -133,8 +133,4 @@
 
 .read-content-article_tip a {
 	color: #000;
-}
-
-.detail-content_detail {
-	word-break: break-word;
 }

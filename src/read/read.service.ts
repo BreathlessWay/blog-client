@@ -25,7 +25,8 @@ export class ReadService {
 
 	async getArticleTags(): Promise<TagListType> {
 		const data = await this.httpService.get('/tags').toPromise();
-		return data.data?.data?.list ?? [];
+		const tagList = data.data?.data?.list ?? [];
+		return tagList.filter(tag => tag.show);
 	}
 
 	async getArticleList({
@@ -90,20 +91,15 @@ export class ReadService {
 	}
 
 	async getArticleDetail({ id }: { id: string }) {
-		const tags = await this.getArticleTags();
 		const data = await this.httpService.get(`/article/${id}`).toPromise();
 		const detail = data.data?.data ?? null;
 
 		if (detail && detail.status === EArticleStatus.show) {
-			if (detail.tags && detail.tags.length && tags && tags.length) {
-				detail.tags = tags
-					.map(tag => {
-						if (detail.tags.includes(tag._id)) {
-							return tag.name;
-						}
-					})
-					.filter(value => value);
+			if (detail.tags && detail.tags.length) {
+				const hideDetail = detail.tags.some(tag => !tag.show);
+				if (hideDetail) return null;
 			}
+
 			if (detail.renderType === EArticleRenderType.richText) {
 				detail.renderHtml = detail.richTextHtml;
 			}
