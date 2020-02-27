@@ -48,7 +48,7 @@ export class ReadController {
 			preQuery: articleList.preQuery,
 			hasNext: articleList.hasNext,
 			nextQuery: articleList.nextQuery,
-			allCount: articleList.allCount,
+			allShowCount: articleList.allShowCount,
 		};
 	}
 

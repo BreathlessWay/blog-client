@@ -43,7 +43,7 @@ export class ReadService {
 		nextQuery: string;
 		hasPre: boolean;
 		preQuery: string;
-		allCount: number;
+		allShowCount: number;
 	}> {
 		let params: any = {
 			pageIndex,
@@ -58,7 +58,7 @@ export class ReadService {
 		}
 		params = Qs.stringify(params);
 		const data = await this.httpService.get(`/article?${params}`).toPromise();
-		let allCount = data.data?.data?.allCount ?? 0,
+		let allShowCount = data.data?.data?.allShowCount ?? 0,
 			count = data.data?.data?.count ?? 0,
 			list = data.data?.data?.list ?? [];
 
@@ -86,7 +86,7 @@ export class ReadService {
 			nextQuery: `?${Qs.stringify(nextQuery)}`,
 			hasPre: pageIndex !== 1,
 			preQuery: `?${Qs.stringify(preQuery)}`,
-			allCount,
+			allShowCount,
 		};
 	}
 

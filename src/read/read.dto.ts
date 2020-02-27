@@ -16,6 +16,7 @@ export class ArticleDetailParams {
 
 export type TagItemType = {
 	count: number;
+	showCount: number;
 	_id: string;
 	name: string;
 	show: boolean;
@@ -63,7 +64,7 @@ export class ArticleResult {
 	preQuery: string;
 	hasNext: boolean;
 	nextQuery: string;
-	allCount: number;
+	allShowCount: number;
 }
 
 export class ArticleDetailResult {
