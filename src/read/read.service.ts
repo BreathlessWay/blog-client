@@ -48,6 +48,7 @@ export class ReadService {
 		let params: any = {
 			pageIndex,
 			pageSize: this.customConfigService.pageSize,
+			status: 1,
 		};
 		if (tagId) {
 			params.tags = [tagId];
@@ -60,7 +61,6 @@ export class ReadService {
 		let allCount = data.data?.data?.allCount ?? 0,
 			count = data.data?.data?.count ?? 0,
 			list = data.data?.data?.list ?? [];
-		list = list.filter(item => item.status);
 
 		const hasNext = pageIndex * this.customConfigService.pageSize < count;
 
