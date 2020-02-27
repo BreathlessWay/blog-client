@@ -18,7 +18,7 @@ html {
 
 .detail-content_tip {
 	line-height: 3;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 .detail-content_time {
@@ -28,7 +28,8 @@ html {
 .detail-content_intro {
 	background: #f0f8ff;
 	line-height: 1.5;
-	padding: 10px 0;
+	padding: 10px;
+	font-size: 14px;
 }
 
 .detail-content_detail {

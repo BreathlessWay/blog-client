@@ -20,15 +20,16 @@
             阅读量：{{ detail.visit }}
         </span>
         <span class="detail-content_time">
-            {{ detail.createdAt | formatTime }}
+            创建时间：{{ detail.createdAt | formatTime }}
         </span>
+        <span>所属标签：</span>
         {% for tag in detail.tags%}
             <span class="detail-content_tag">
                 {{ tag }}
             </span>
         {% endfor %}
     </aside>
-    <p class="text-center detail-content_intro">
+    <p class="detail-content_intro">
         {{ detail.intro }}
     </p>
     <section class="detail-content_detail">
