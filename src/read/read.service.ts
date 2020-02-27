@@ -1,6 +1,7 @@
 import { HttpService, Injectable } from '@nestjs/common';
 
 import { CommonService } from '../common/common.service';
+import { CustomConfigService } from '../config/config.service';
 
 import * as Qs from 'qs';
 import * as marked from 'marked';
@@ -19,6 +20,7 @@ export class ReadService {
 	constructor(
 		private readonly httpService: HttpService,
 		private readonly commonService: CommonService,
+		private readonly customConfigService: CustomConfigService,
 	) {}
 
 	async getArticleTags(): Promise<TagListType> {
@@ -44,7 +46,7 @@ export class ReadService {
 	}> {
 		let params: any = {
 			pageIndex,
-			pageSize: 6,
+			pageSize: this.customConfigService.pageSize,
 		};
 		if (tagId) {
 			params.tags = [tagId];
@@ -59,7 +61,7 @@ export class ReadService {
 			list = data.data?.data?.list ?? [];
 		list = list.filter(item => item.status);
 
-		const hasNext = pageIndex * params.pageSize < count;
+		const hasNext = pageIndex * this.customConfigService.pageSize < count;
 
 		const nextQuery: any = {
 				pageIndex: pageIndex + 1,

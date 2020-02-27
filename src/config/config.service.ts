@@ -10,6 +10,8 @@ export enum EnumEnv {
 export class CustomConfigService {
 	constructor(private configService: ConfigService) {}
 
+	readonly pageSize = 6;
+
 	get env(): EnumEnv {
 		return this.configService.get('NODE_ENV');
 	}

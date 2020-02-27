@@ -7,12 +7,12 @@
 
 .home-content_left {
 	flex: 1;
-	padding-bottom: 60px;
+	padding: 60px 0;
 	align-self: flex-start;
 }
 
 .home-content_right {
-	flex: 1.5;
+	flex: 1;
 }
 
 .home-content_en {
@@ -29,8 +29,8 @@
 }
 
 .home-content-icon_item {
-	width: 30px;
-	height: 30px;
+	width: 40px;
+	height: 40px;
 	margin: 20px 5px 0 0;
 }
 .home-content-pic_item {

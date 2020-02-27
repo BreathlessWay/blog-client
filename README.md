@@ -9,6 +9,10 @@
 4. [JQuery](http://jquery.cuishifeng.cn/): Dom 操作库
 5. [Decorator](http://es6.ruanyifeng.com/#docs/decorator): 装饰器 ps: [ts 文档](https://www.tslang.cn/docs/handbook/decorators.html)
 6. [PostCSS](https://github.com/postcss/postcss-cli): css 编译工具
+7. [marked](https://github.com/markedjs/marked)：markdown 解析插件
+8. [highlightjs](https://highlightjs.org/)：代码高亮插件
+   - [css](https://cdnjs.com/libraries/highlight.js)：高亮样式
+   - [github-markdown-css](https://cdnjs.com/libraries/github-markdown-css)：github 风格的 markdown 样式
 
 > 代码规范
 
