@@ -12,7 +12,7 @@ services:
     image: docker_image_blog_client
     # 启动服务时将服务的7001端口对外映射到7001端口
     ports:
-      - '0.0.0.0:4000:80'
+      - '80:4000'
     # 映射上传文件的目录
     volumes:
       - /root/blog-upload/upload:/blog-client/public/upload
