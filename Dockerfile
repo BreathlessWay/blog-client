@@ -14,7 +14,7 @@ RUN npm i
 # .dockerignore声明的文件不会被拷贝
 COPY . /blog-client
 # 对外暴露端口
-EXPOSE 80
+EXPOSE 4000
 # 启动时运行的命令
 CMD npm run deploy
 
