@@ -19,3 +19,7 @@
 1. 代码格式化: [prettier](https://prettier.io/), [pretty-quick](https://github.com/azz/pretty-quick#readme)
 2. git commit 规范化: [commitlint](https://commitlint.js.org/#/)
 3. git 提交钩子辅助工具: [husky](https://github.com/typicode/husky#readme)
+
+> 关于 Docker
+
+1. docker-compose 中的`ports：'80:4000'`, 后面的是 docker 端口，前面的是映射到本机的端口
