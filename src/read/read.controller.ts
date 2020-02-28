@@ -67,10 +67,16 @@ export class ReadController {
 			response.redirect(`/${EMenuType.read}`);
 			return;
 		} else {
+			let keywords = '';
+			if (detail.tags && detail.tags.length) {
+				keywords = detail.tags.reduce((previousValue, currentValue) => {
+					return previousValue + currentValue.name;
+				}, keywords);
+			}
 			response.render('detail', {
-				title: detail?.title ?? '文章详情',
-				description: detail?.intro ?? '博客文章详情',
-				keywords: detail?.tags ?? ['博客文章详情'].join('，'),
+				title: detail.title || '文章详情',
+				description: detail.intro || '博客文章详情',
+				keywords: keywords || '博客文章详情',
 				menus,
 				detail,
 				reward,
