@@ -117,8 +117,23 @@ export class ReadService {
 					},
 				});
 
+				const renderer = new marked.Renderer();
+
+				// 段落解析
+				const paragraphParse = (text: string) => `<p>${text}</p>`;
+
+				// 链接解析
+				const linkParse = (href: string, title: string, text: string) => {
+					return `<a href=${href} title=${title ||
+						href} target='_blank'}>${text}</a>`;
+				};
+
+				renderer.paragraph = paragraphParse;
+				renderer.link = linkParse;
+
 				detail.renderHtml = `<article class="markdown-body">${marked(
 					detail.markdown,
+					{ renderer },
 				)}</article>`;
 			}
 			return detail;
