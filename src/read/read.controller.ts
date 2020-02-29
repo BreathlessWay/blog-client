@@ -34,7 +34,6 @@ export class ReadController {
 				tagId,
 				keyword,
 			});
-		articleList.list = [];
 		return {
 			title: '文章列表',
 			description: '博客文章列表 ',
