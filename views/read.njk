@@ -77,6 +77,7 @@
         </section>
     </section>
     <section class="read-content-article">
+        {% if articleList.length %}
         <ul class="read-content-article_list">
             {% for article in articleList %}
             <li class="read-content-article_item">
@@ -95,6 +96,9 @@
             </li>
             {% endfor %}
         </ul>
+        {% else%}
+        <aside class="read-content-article_empty text-center">暂无文章</aside>
+        {% endif %}
     </section>
     <div style="clear: both"></div>
     <section class="read-content-page flex">

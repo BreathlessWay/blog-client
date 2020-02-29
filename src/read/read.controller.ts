@@ -9,7 +9,6 @@ import { Response } from 'express';
 import { EMenuType } from '../common/common.dto';
 import {
 	ArticleDetailParams,
-	ArticleDetailResult,
 	ArticleListQuery,
 	ArticleResult,
 } from './read.dto';
@@ -35,7 +34,7 @@ export class ReadController {
 				tagId,
 				keyword,
 			});
-
+		articleList.list = [];
 		return {
 			title: '文章列表',
 			description: '博客文章列表 ',
@@ -65,7 +64,6 @@ export class ReadController {
 
 		if (!detail) {
 			response.redirect(`/${EMenuType.read}`);
-			return;
 		} else {
 			let keywords = '';
 			if (detail.tags && detail.tags.length) {

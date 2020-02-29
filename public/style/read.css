@@ -140,3 +140,9 @@
 .read-content-article_tip a {
 	color: #000;
 }
+
+.read-content-article_empty {
+	font-size: 36px;
+	color: #999;
+	line-height: 10;
+}
