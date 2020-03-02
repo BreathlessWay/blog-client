@@ -21,7 +21,11 @@
         </h1>
 
         <p class="home-content_intro">
+            {% if soup %}
+            {{ soup }}
+            {% else %}
             {{ homeUserInfo.intro }}
+            {% endif %}
         </p>
         <ul class="home-content-icon_list flex">
             {% for ico in homeUserInfo.social.ico %}

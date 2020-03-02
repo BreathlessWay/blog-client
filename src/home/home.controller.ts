@@ -21,6 +21,7 @@ export class HomeController {
 	async renderHome(): Promise<HomeResult> {
 		const menus = await this.commonService.getMenu();
 		const homeUserInfo = await this.homeService.getHomeUserInfo();
+		const soup = await this.homeService.getSoup();
 
 		return {
 			title: '首页',
@@ -28,6 +29,7 @@ export class HomeController {
 			keywords: '个人博客 首页 ',
 			menus,
 			homeUserInfo,
+			soup,
 		};
 	}
 }

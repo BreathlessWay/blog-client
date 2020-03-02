@@ -1,11 +1,14 @@
-import { Injectable } from '@nestjs/common';
+import { HttpService, Injectable } from '@nestjs/common';
 
 import { CommonService } from '../common/common.service';
 import { HomeUserInfoFormatType } from './home.dto';
 
 @Injectable()
 export class HomeService {
-	constructor(private readonly commonService: CommonService) {}
+	constructor(
+		private readonly commonService: CommonService,
+		private readonly httpService: HttpService,
+	) {}
 
 	async getHomeUserInfo(): Promise<HomeUserInfoFormatType> {
 		const data = await this.commonService.getUserInfo();
@@ -45,5 +48,10 @@ export class HomeService {
 		}
 
 		return userInfo;
+	}
+
+	async getSoup() {
+		const data = await this.httpService.get('/soup').toPromise();
+		return data.data?.data?.result;
 	}
 }

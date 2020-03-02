@@ -19,4 +19,5 @@ export class HomeResult {
 	keywords: string;
 	menus: MenuListType;
 	homeUserInfo: HomeUserInfoFormatType;
+	soup: string;
 }
