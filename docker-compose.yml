@@ -13,7 +13,7 @@ services:
     # 启动服务时将服务的7001端口对外映射到7001端口
     # 后面的是docker端口，前面的是映射到本机的端口
     ports:
-      - '4000:4000'
+      - '80:4000'
     # 映射上传文件的目录
     volumes:
       - /root/blog-upload/upload:/blog-client/public/upload
