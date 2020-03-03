@@ -24,9 +24,9 @@
         </span>
         <span>所属标签：</span>
         {% for tag in detail.tags%}
-            <span class="detail-content_tag">
+            <a class="detail-content_tag" href="{{ '/read?tagId='+tag._id }}">
                 {{ tag.name }}
-            </span>
+            </a>
         {% endfor %}
     </aside>
     <p class="detail-content_intro">
