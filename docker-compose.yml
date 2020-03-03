@@ -10,7 +10,7 @@ services:
     container_name: docker_container_blog_client
     # 启动服务依赖的镜像名
     image: docker_image_blog_client
-    # 启动服务时将服务的7001端口对外映射到7001端口
+    # 启动服务时将服务的4000端口对外映射到80端口
     # 后面的是docker端口，前面的是映射到本机的端口
     ports:
       - '80:4000'
