@@ -1,7 +1,7 @@
 {% extends "common/template.njk" %}
 
 {% block link %}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/monokai.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
 <link rel="stylesheet" href="/public/style/detail.css">
 {% endblock %}
@@ -17,21 +17,23 @@
     </h1>
     <aside class="text-center detail-content_tip">
         <span class="detail-content_visit">
-            阅读量：{{ detail.visit }}
+            阅读量 {{ detail.visit }}
         </span>
         <span class="detail-content_time">
-            创建时间：{{ detail.createdAt | formatTime }}
+            · {{ detail.createdAt | formatTime }} ·
         </span>
-        <span>所属标签：</span>
         {% for tag in detail.tags%}
             <a class="detail-content_tag" href="{{ '/read?tagId='+tag._id }}">
                 {{ tag.name }}
             </a>
         {% endfor %}
     </aside>
-    <p class="detail-content_intro">
-        {{ detail.intro }}
-    </p>
+    <section class="flex detail-content_intro">
+        <p>
+            {{ detail.intro }}
+        </p>
+    </section>
+    <hr class="detail-hr" color="#eee">
     <section class="detail-content_detail">
         {{ detail.renderHtml}}
     </section>
@@ -52,6 +54,8 @@
         </ul>
     </section>
     {% endif %}
+    {% include "common/beian.njk" %}
+
 </article>
 
 {% endblock %}

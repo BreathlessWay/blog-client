@@ -32,12 +32,14 @@
                     <p class="user-content-skill_name">
                         {{ skill.name }}
                     </p>
-                    <aside style="width: {{ skill.percent }}%; background-color: {{ skill.color }}" class="user-content-skill_line">
+                    <aside class="user-content-skill_line">
+                        <div style="width: {{ skill.percent }}%; background-color: {{ skill.color }}; height: 8px"></div>
                     </aside>
                 </li>
             {% endfor %}
         </ul>
     </section>
+    {% include "common/beian.njk" %}
 </article>
 {% endblock %}
 

@@ -1,8 +1,18 @@
+body,
+html {
+	min-width: 1200px;
+}
+
 #blog {
 	background: #fff;
 }
 
+.bei-an {
+	text-align: left;
+}
+
 .home-content {
+	position: relative;
 }
 
 .home-content_left {
