@@ -29,17 +29,18 @@
         {% endfor %}
     </aside>
     <section class="flex detail-content_intro">
-        <p>
-            {{ detail.intro }}
-        </p>
+        <img src="/public/image/mh.png" alt="" class="detail-content_intro__mh">
+        <p class="detail-content_intro__content">
+                    {{ detail.intro }}
+                </p>
     </section>
-    <hr class="detail-hr" color="#eee">
+    <hr class="detail-hr" color="#eee" />
     <section class="detail-content_detail">
         {{ detail.renderHtml}}
     </section>
     {% if reward.rewardEnable %}
     <section class="text-center detail-content-reward">
-        <p>
+        <p class="detail-content-reward__title">
             {{ reward.rewardTitle }}
         </p>
         <ul>

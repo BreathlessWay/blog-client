@@ -16,34 +16,45 @@
 }
 
 .detail-content_title {
-	font-size: 36px;
+	font-size: 28px;
 }
 
 .detail-content_tip {
-	line-height: 3;
 	font-size: 14px;
-	margin-bottom: 20px;
+	margin-top: 20px;
+	margin-bottom: 45px;
 }
 
 .detail-content_time {
 }
 
+.detail-content_intro__mh {
+	width: 28px;
+	margin-right: 18px;
+}
+
 .detail-content_intro {
 	background: #fafafa;
 	line-height: 1.6;
-	padding: 20px;
-	font-size: 16px;
-	color: #333;
+	padding: 30px 50px;
+	font-size: 15px;
+	color: #555;
+	align-items: flex-start;
+}
+
+.detail-content_intro__content {
+	flex: 1;
 }
 
 .detail-content_detail {
-	padding: 20px 0 40px;
+	padding: 20px 0 60px;
 	line-height: 1.5;
 	word-break: break-all;
 }
 
 .detail-hr {
-	margin: 30px 0;
+	border-top: 0;
+	margin: 40px 0 45px;
 }
 
 .markdown-body ul {
@@ -51,12 +62,17 @@
 }
 
 .detail-content-reward {
-	font-size: 24px;
+	font-size: 14px;
+}
+
+.detail-content-reward__title {
+	font-weight: 600;
+	font-size: 18px;
 }
 
 .detail-content-reward_code {
 	display: inline-block;
-	margin: 10px 10px 60px;
+	margin: 20px 10px;
 	width: 160px;
 	font-size: 16px;
 	line-height: 3;

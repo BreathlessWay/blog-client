@@ -26,12 +26,12 @@ html {
 }
 
 .home-content_en {
-	font-size: 24px;
+	font-size: 20px;
 }
 
 .home-content_zh {
-	margin: 30px 0;
-	font-size: 48px;
+	margin: 50px 0;
+	font-size: 44px;
 }
 
 .home-content_intro {
@@ -41,11 +41,11 @@ html {
 .home-content-icon_item {
 	width: 40px;
 	height: 40px;
-	margin: 20px 5px 0 0;
+	margin: 50px 5px 0 0;
 }
 .home-content-pic_item {
 	width: 100px;
-	margin: 20px 20px 0 0;
+	margin: 50px 20px 0 0;
 	line-height: 1.5;
 }
 
