@@ -53,7 +53,7 @@
 
             <ul class="read-content-tag_list">
                 <li class="read-content-tag_item text-center">
-                    <section class="read-content-tag_item__wrap">
+                    <section class="{{ 'read-content-tag_item__wrap' if currentTagId else 'active read-content-tag_item__wrap' }}">
                         <p class="read-content-tag_name">
                             全部
                         </p>
@@ -64,7 +64,7 @@
                 </li>
                 {% for tag in tagList %}
                 <li class="read-content-tag_item text-center" data-tagid="{{ tag._id }}">
-                    <section class="read-content-tag_item__wrap">
+                    <section class="{{ 'active read-content-tag_item__wrap' if tag._id === currentTagId else 'read-content-tag_item__wrap' }}">
                         <p class="read-content-tag_name">
                             {{ tag.name }}
                         </p>

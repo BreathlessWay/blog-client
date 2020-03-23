@@ -74,6 +74,10 @@
 	margin-top: 10px;
 	font-size: 14px;
 }
+.active.read-content-tag_item__wrap {
+	background-color: #484848;
+	color: #fff;
+}
 
 .read-content-tag_item__wrap:hover {
 	background-color: #484848;

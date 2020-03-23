@@ -65,6 +65,7 @@ export class ArticleResult {
 	hasNext: boolean;
 	nextQuery: string;
 	allShowCount: number;
+	currentTagId: string | undefined;
 }
 
 export class ArticleDetailResult {

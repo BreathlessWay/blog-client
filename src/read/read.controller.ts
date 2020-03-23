@@ -47,6 +47,7 @@ export class ReadController {
 			hasNext: articleList.hasNext,
 			nextQuery: articleList.nextQuery,
 			allShowCount: articleList.allShowCount,
+			currentTagId: tagId,
 		};
 	}
 
