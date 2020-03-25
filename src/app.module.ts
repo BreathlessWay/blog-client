@@ -23,7 +23,7 @@ import { ReadService } from './read/read.service';
 		HttpModule.registerAsync({
 			imports: [ConfigModule],
 			useFactory: async (configService: CustomConfigService) => ({
-				timeout: 5000,
+				timeout: 50000,
 				maxRedirects: 5,
 				baseURL: configService.basicUrl,
 			}),
