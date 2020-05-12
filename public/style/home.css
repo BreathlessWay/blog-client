@@ -7,8 +7,8 @@ html {
 	background: #fff;
 }
 
-.bei-an {
-	text-align: left;
+.bei-an_wrap {
+	justify-content: flex-start;
 }
 
 .home-content {

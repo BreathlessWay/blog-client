@@ -250,12 +250,26 @@ img {
 	width: 1200px;
 }
 
-.bei-an {
-	font-size: 12px;
-	color: #ccc;
+.bei-an_wrap{
 	position: absolute;
 	bottom: 20px;
 	left: 0;
 	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.bei-an_content {
+	font-size: 12px;
+	color: #ccc;
 	text-align: center;
+	display: flex;
+	align-items: center;
+	margin-right: 10px;
+}
+
+.bei-an_image{
+	margin-right: 3px;
+	width: 14px;
 }
