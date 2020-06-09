@@ -81,4 +81,21 @@ export class ReadController {
 			});
 		}
 	}
+
+	@Get('/pram')
+	@Render('pram')
+	@ErrorHandle()
+	async renderPram() {
+		const menus = await this.commonService.getMenu(),
+			reward = await this.readService.getRewardInfo();
+
+		return {
+			title: '婴儿车数据表',
+			description:
+				'收集了一些网上推荐的婴儿车后，在电商平台进行数据收集整理，并整理出商品的评价信息后列出的婴儿车数据表，仅供参考',
+			keywords: '婴儿车数据表',
+			menus,
+			reward,
+		};
+	}
 }

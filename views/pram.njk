@@ -1,0 +1,660 @@
+{% extends "common/template.njk" %}
+
+{% block link %}
+<link rel="stylesheet" href="/public/style/detail.css">
+<link rel="stylesheet" href="/public/style/pram.css">
+{% endblock %}
+
+{% block content %}
+
+{% import "common/macro.njk" as macro %}
+{{ macro.menu('read', menus) }}
+
+<article class="detail-content blog-content">
+    <h1 class="text-center detail-content_title">
+        {{ title }}
+    </h1>
+    <aside class="text-center detail-content_tip">
+        <span class="detail-content_time">
+            {{ detail.createdAt | formatTime }}
+        </span>
+    </aside>
+    <section class="flex detail-content_intro">
+        <img src="/public/image/mh.png" alt="" class="detail-content_intro__mh">
+        <p class="detail-content_intro__content">
+            {{ description }}
+        </p>
+    </section>
+    <hr class="detail-hr" color="#eee"/>
+    <section class="detail-content_detail">
+        <table cellpadding="0" cellspacing="0" class="pram-table">
+            <thead>
+            <tr>
+                <th style="text-align:center;" colspan="1" rowspan="2"><span style="font-size:14px">品牌型号</span></th>
+                <th style="text-align:center;" colspan="1" rowspan="2"><span style="font-size:14px">车型</span></th>
+                <th style="text-align:center;" colspan="1" rowspan="2"><span style="font-size:14px">价格(元)</span></th>
+                <th style="text-align:center;" colspan="1" rowspan="2"><span style="font-size:14px">活动赠送</span></th>
+                <th style="text-align:center;" colspan="9" rowspan="1"><span style="font-size:14px">必要条件</span></th>
+                <th style="text-align:center;" colspan="2" rowspan="1"><span style="font-size:14px">座舱</span></th>
+                <th style="text-align:center;" colspan="2" rowspan="1"><span style="font-size:14px">评价</span></th>
+            </tr>
+            <tr class="pram-subtitle">
+                <th style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px">避震</span></th>
+                <th style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px">一键刹车</span></th>
+                <th style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px">高度(cm)</span></th>
+                <th style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px">可卧可躺</span></th>
+                <th style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px">天窗</span></th>
+                <th style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px">五点安全带</span></th>
+                <th style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px">双向推行</span></th>
+                <th style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px">万向轮</span></th>
+                <th style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px">其他</span></th>
+                <th style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px">大小(cm)</span></th>
+                <th style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px">特点</span></th>
+                <th style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px">统计</span></th>
+                <th style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px">反馈较多问题</span></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#003884"><a
+                        href="https://item.jd.com/29130431761.html#crumb-wrap" style="color:#003884">GOKKE德国婴儿推车双向高景观可坐可躺轻便折叠简易携带0-3岁宝宝儿童伞车 小恐龙（新品）</a></span></span>
+                </td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">高景观</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#393939">领券到手价1039</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 保暖脚罩</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">2. 推车收纳袋</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">3. 环保雨罩</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">4. 文帐</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">5. 凉席</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">6. 奶瓶架</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">7. 6.16-6.20送伞车</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 四轮弹簧避震</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">45</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">前轮万向</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 全蓬遮阳</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">2. 宽敞置物篮</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">3. 铝合金材质</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">4. 重7.9kg</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">34*90</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 一体座舱</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">2. 12mm加厚海绵垫</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">全部5200+</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#000000">中评10+</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#000000">差评10+</span></span></td>
+                <td style="text-align:left;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">车板薄，车身软，避震较差，车轮不顺滑，座椅最窄处（也就是宝宝坐的地方）只有27～28厘米，介绍说的座宽34厘米是脚托衔接处，座长到顶了撑死只有84～85厘米，宣传说90厘米，裤裆位带子特别短，怎么系都会卡裆，座舱，不仅没有避震效果，完全不透气，天气转热，躺着睡会儿，后背就一身汗，平躺头低，坐立会撞着扶手，车身有异味</span></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span ><a
+                        href="https://item.jd.com/48282672669.html" style="color:#b3a1c8">德国SISVER婴儿车四代婴儿推车可坐可躺双向推行高景观摇篮小孩带睡篮新生儿童宝宝溜娃手推轻便折叠车 四代升级款-欧风蓝-少量现货-单手收车</a></span></span>
+                </td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">高景观</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">738</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">1. 前200下单送驱蚊贴冰垫</span></span><br><span style="font-size:14px"><span
+                        style="color:#b3a1c8">2. 前300送双面坐垫，藤席，保暖脚套，蚊帐，安全手腕带</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">2. 四轮弹簧避震</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">50</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">前轮万向</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">1. 宽敞置物篮</span></span><br><span style="font-size:14px"><span
+                        style="color:#b3a1c8">2. 铝合金材质</span></span><br><span style="font-size:14px"><span
+                        style="color:#b3a1c8">3. 5段全蓬遮阳</span></span><br><span style="font-size:14px"><span
+                        style="color:#b3a1c8">4. 重7.2kg</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">36*85</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">1. 可提睡篮</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">全部2100+</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#b3a1c8">中评6</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#b3a1c8">差评6</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">避震一般，重不适合单手操作，车身有异味</span></span></td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#003884"><a
+                        href="https://item.jd.com/100008792364.html#">嘉也 Justyes 婴儿推车高景观双向可坐可躺折叠轻便宝宝儿童手推车 深灰色</a></span></span>
+                </td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">高景观</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1199</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#000000">无</span></span>
+                </td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 四轮弹簧避震</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">2. 避震带</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">55</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">前轮万向</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 宽敞置物篮</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">2. 航空轻铝</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">4. 重7.4kg</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">35*82</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">无</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">全部700+</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#000000">中评3</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#000000">差评4</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#000000">车身味道大</span></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#003884"><a
+                        href="https://item.jd.com/10121381825.html">好孩子官方gb婴儿推车高景观童车 宝宝可坐可平躺双向避震折叠BB轻便手推车GB08/GB116 GB116-R220 藏青色</a></span></span>
+                </td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">高景观</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1019</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#000000">无</span></span>
+                </td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 一体避震车架</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">2. 睡篮加厚海绵垫滤震</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">3. 前轮内置弹簧，后轮防爆充气胎</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">61</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">❌</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">前轮万向</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 封闭式置物篮</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">2. 可拆洗</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">3. 铝合金</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">4. 重14.3kg</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">38*85</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 滤震海绵垫</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">全部8500+</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#000000">中评40+</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#000000">差评80+</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#000000">车身味道大，车身重，价格浮动大，车身晃，有二手可能</span></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#003884"><a
+                        href="https://item.jd.com/1531687312.html">Pouch 帛琦 婴儿推车儿童推车高景观宝宝推车婴儿车推车可坐可躺折叠冬夏P68 旗舰版-红色</a></span></span>
+                </td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">高景观</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">699</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#000000">无</span></span>
+                </td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 前轮内置弹簧，免充气橡胶后轮</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">52</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">前轮万向</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 宽敞置物篮</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">2. 配备车身反光条</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">3. 铝合金</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">4. 重15kg</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">34*82</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">无</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">全部5900+</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#000000">中评60+</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#000000">差评50+</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#000000">车身重，车身味道大，头低脚高，车身晃，避震一般，睡篮窄</span></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#003884"><a
+                        href="https://item.jd.com/10403995101.html">爱贝丽（IBelieve）婴儿推车超轻便双向推车新生儿手推车高景观可坐可躺BB儿童车宝宝童车四季伞车 玲珑Pro·5- 英伦粉(双向款)</a></span></span>
+                </td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">高景观</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1058</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#000000">1. 前100送背带腰凳</span></span><br><span
+                        style="font-size:14px"><span style="color:#000000">2. 推车坐垫</span></span><br><span
+                        style="font-size:14px"><span style="color:#000000">3. 防虫蚊帐</span></span><br><span
+                        style="font-size:14px"><span style="color:#000000">4. 宝宝脚托</span></span><br><span
+                        style="font-size:14px"><span style="color:#000000">5. 奶瓶架</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 四轮弹簧避震</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">2. 镁合金车架避震</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">53</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">前轮万向</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 宽敞置物篮</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">2. 超大全景遮阳篷</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">3. 镁合金</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">4. 重10.0kg</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">36*84</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">无</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">全部7200+</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#000000">中评40+</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#000000">差评20+</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#000000">价格波动大，车身味道大，车身晃动避震一般</span></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#003884"><a
+                        href="https://item.jd.com/12319257383.html">Pouch 帛琦 婴儿推车轻便高景观可坐可躺伞车双向婴儿手推车宝宝推车折叠童车A06 墨绿</a></span></span>
+                </td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">轻便型</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">589</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#000000">无</span></span>
+                </td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 四轮柔性避震</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">56</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">前轮万向</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 加大置物篮</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">2. 全罩式遮阳篷</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">3. 铝合金</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">4. 重6.5kg</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">34*85</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">无</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">全部5600+</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#000000">中评50+</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#000000">差评30+</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#000000">车轮问题较多，车身味道大，避震效果一般，车身较单薄，晃动明显</span></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#003884"><a
+                        href="https://item.jd.com/31892940134.html#">yuyu婴儿车可坐可躺双向宝宝推车轻便折叠伞车溜娃神器自动收车 双向车-小宇宙黑色车架探险家</a></span></span>
+                </td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">轻便型</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">799</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#000000">无</span></span>
+                </td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. PU轮胎</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">2. 缓冲坐垫</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">3. 车架避震</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">47.5</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">前轮万向</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 置物篮</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">2. 三档调节遮阳篷</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">3. 航空铝</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">4. 重6.7kg</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">5. 延长脚踏</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">33*88</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 一体式pp硬板</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">全部3000+</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#000000">中评9</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#000000">差评10+</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">车轮容易坏，车身晃</span></span></td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#003884"><a
+                        href="https://item.jd.com/7507786.html">babycare婴儿推车 可坐可躺手推车童车轻便折叠儿童推车 8700荷绿</a></span></span>
+                </td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">轻便型</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">799</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#000000">1. 棉垫</span></span><br><span
+                        style="font-size:14px"><span style="color:#000000">2. 手腕带</span></span><br><span
+                        style="font-size:14px"><span style="color:#000000">3. 收纳袋</span></span><br><span
+                        style="font-size:14px"><span style="color:#000000">4. 蚊帐</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 四轮避震</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">44</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">最大仰角只有155'</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">❌</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">前轮万向</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 购物篮</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">2. 普通遮阳篷</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">3. 铝合金</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">4. 重6.5kg</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">5. 可调节脚托</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">35*77</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">无</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#000000">全部1w+</span></span><br><br><br><span
+                        style="font-size:14px"><span style="color:#000000">中评30+</span></span><br><br><br><span
+                        style="font-size:14px"><span style="color:#000000">差评50+</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#000000">车身晃动明显，避震一般，价格波动大，车身味道大，</span></span><strong><span
+                        style="font-size:18px"><span style="color:#c24f4a">有报道Babycare旗下的一款型号为8700的童车，被检测出邻苯二甲酸酯超出国家标准要求的3倍。</span></span></strong>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span><a
+                        href="https://item.jd.com/1242831555.html" style="color:#b3a1c8">爱贝丽（IBelieve） 婴儿推车可坐可躺新生儿婴儿车高景观双向避震折叠儿童童车0-3岁宝宝手推车 变色龙5-玛雅灰（0-3岁）</a></span></span>
+                </td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">高景观</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">1259</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#b3a1c8">1. 前100送背带腰凳</span></span><br><span
+                        style="font-size:14px"><span style="color:#b3a1c8">2. 推车坐垫</span></span><br><span
+                        style="font-size:14px"><span style="color:#b3a1c8">3. 防虫蚊帐</span></span><br><span
+                        style="font-size:14px"><span style="color:#b3a1c8">4. 宝宝脚托</span></span><br><span
+                        style="font-size:14px"><span style="color:#b3a1c8">5. 奶瓶架</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">1. 三档避震</span></span><br><span style="font-size:14px"><span
+                        style="color:#b3a1c8">2. 镁合金车架避震</span></span><br><span style="font-size:14px"><span
+                        style="color:#b3a1c8">3. 橡胶大轮</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">56</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">前轮万向</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">1. 置物篮</span></span><br><span style="font-size:14px"><span
+                        style="color:#b3a1c8">2. 遮阳蓬</span></span><br><span style="font-size:14px"><span
+                        style="color:#b3a1c8">3. 镁合金</span></span><br><span style="font-size:14px"><span
+                        style="color:#b3a1c8">4. 重11kg</span></span><br><span style="font-size:14px"><span
+                        style="color:#b3a1c8">5. 可调节脚托</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">34*80</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">1. 睡篮有透气棉垫层+睡篮夹棉层+桦木衬板</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">全部5400+</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#b3a1c8">中评40+</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#b3a1c8">差评20+</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#b3a1c8">车子笨重，车身味道大，车篮没有透气功能</span></span></td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#003884"><a
+                        href="https://item.jd.com/60046270842.html">Pouch 帛琦 婴儿推车轻便折叠抑菌防螨防污可坐可躺婴儿伞车简易宝宝推车 Q8 怪兽星球-【炫酷荧光版】</a></span></span>
+                </td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">轻便型</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">699</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#000000">1. 前500送定制雨罩</span></span>
+                </td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. eva避震轮胎</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">❌</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">45</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">❌</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">前轮万向</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 加大置物篮</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">2. 四防，防水，防紫外线，防刮破，防污，有荧光点遮阳篷</span></span><br><span
+                        style="font-size:14px"><span style="color:#000000">3. 铝合金</span></span><br><span
+                        style="font-size:14px"><span style="color:#000000">4. 重6.4kg</span></span><br><span
+                        style="font-size:14px"><span style="color:#000000">5. 可调节脚托</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">36*83</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 双重加棉，高弹透气</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">2. 鸡蛋棉坐垫</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">全部1400+</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#000000">中评5</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#000000">差评4</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">车身晃动，避震一般，车轮不灵活</span></span></td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#003884"><a
+                        href="https://item.jd.com/23333592379.html">好孩子官方gb婴儿推车 可坐可躺宝宝推车四轮避震 伞车轻便折叠D678 灰色（D678-H-Q315GG）</a></span></span>
+                </td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">轻便型</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">889</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#000000">无</span></span>
+                </td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 8轮避震</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">❌</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">47</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">❌</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">❌</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">前轮万向</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 置物篮</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">2. 半蓬遮阳篷</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">3. 铝合金</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">4. 重7kg左右</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">31*80</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">无</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">全部2300+</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#000000">中评10+</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#000000">差评10+</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">价格波动大，车身小，</span><span style="color:#333333">安全卡扣问题较大</span></span></td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#003884"><a
+                        href="https://item.jd.com/46073699174.html">gb好孩子ORSA婴儿车婴儿推车可坐可躺 推车轻便折叠宝宝遛娃避震D850-A/B/D852新品上市 绅士灰（D850-A-S205GG）</a></span></span>
+                </td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">轻便型</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1619</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#000000">无</span></span>
+                </td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 四轮弹簧避震</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">43</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">✅</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">❌</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">前轮万向</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">1. 置物篮</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">2. 半蓬遮阳篷</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">3. 铝合金</span></span><br><span style="font-size:14px"><span
+                        style="color:#000000">4. 重6.8kg</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">35*80</span></span></td>
+                <td style="text-align:center;" colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">无</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span
+                        style="color:#000000">全部2200+</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#000000">中评3</span></span><br><br><br><span style="font-size:14px"><span
+                        style="color:#000000">差评7</span></span></td>
+                <td colspan="1" rowspan="1"><span style="font-size:14px"><span style="color:#000000">售后差</span></span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    {% if reward.rewardEnable %}
+    <section class="text-center detail-content-reward">
+        <p class="detail-content-reward__title">
+            {{ reward.rewardTitle }}
+        </p>
+        <ul>
+            <li class="detail-content-reward_code">
+                <img src="{{ reward.zfbCode | picUrl}}" alt="">
+                <span>支付宝</span>
+            </li>
+            <li class="detail-content-reward_code">
+                <img src="{{ reward.wxCode | picUrl}}" alt="">
+                <span>微信</span>
+            </li>
+        </ul>
+    </section>
+    {% endif %}
+    {% include "common/beian.njk" %}
+
+</article>
+
+{% endblock %}
+
+{% block script %}
+{% endblock %}

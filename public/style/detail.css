@@ -43,6 +43,7 @@
 }
 
 .detail-content_intro__content {
+	word-break: break-word;
 	flex: 1;
 }
 

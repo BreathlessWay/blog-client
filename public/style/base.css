@@ -75,8 +75,7 @@ sup {
 	top: -0.5em;
 }
 
-img,
-table {
+img {
 	border-style: none;
 	width: 100%;
 }
@@ -250,7 +249,7 @@ img {
 	width: 1200px;
 }
 
-.bei-an_wrap{
+.bei-an_wrap {
 	position: absolute;
 	bottom: 20px;
 	left: 0;
@@ -269,7 +268,7 @@ img {
 	margin-right: 10px;
 }
 
-.bei-an_image{
+.bei-an_image {
 	margin-right: 3px;
 	width: 14px;
 }

@@ -1,0 +1,29 @@
+.detail-content_detail {
+	overflow-x: auto;
+}
+.pram-table {
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	width: 2000px;
+}
+
+.pram-table th {
+	background: #df402a;
+	color: #fff;
+}
+
+.pram-table td,
+.pram-table th {
+	border-top: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	padding: 10px;
+	min-width: 100px;
+}
+
+.pram-subtitle th {
+	background: #fae220;
+}
+
+.pram-table td a {
+	color: #358fa0;
+}
